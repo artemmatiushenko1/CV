@@ -74,7 +74,7 @@ body {
 
 .card__title {
   color: var(--color-primary);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   position: relative;
   display: inline-block;
   margin-bottom: 1rem;
@@ -91,7 +91,7 @@ body {
 
 .intro__occupation {
   color: var(--color-primary);
-  font-size: 1.8;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
 }
 
@@ -251,7 +251,7 @@ body {
 }
 
 .education__item {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   display: grid;
   grid-template-columns: min-content 1fr;
   column-gap: 2rem;
@@ -422,5 +422,9 @@ body {
 
   .project__content--active {
     max-height: 30rem;
+  }
+
+  .social__link {
+    font-size: 2rem;
   }
 }
