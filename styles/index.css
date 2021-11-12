@@ -47,7 +47,6 @@ body {
   padding: 3rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr);
   column-gap: 4rem;
   row-gap: 4rem;
   z-index: 10;
@@ -64,6 +63,7 @@ body {
 .resume__photo {
   max-width: 20rem;
   border-radius: 50%;
+  display: inline-block;
 }
 
 .card {
@@ -382,4 +382,45 @@ body {
 .project__link:hover,
 .project__link:active {
   border-color: var(--color-primary);
+}
+
+@media only screen and (max-width: 43.75em) {
+  .resume {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 2rem;
+    margin-top: 0;
+  }
+
+  .column--left {
+    grid-column: auto;
+  }
+
+  .column--right {
+    grid-column: auto;
+  }
+
+  .intro {
+    grid-column: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .intro__socials {
+    justify-content: center;
+  }
+
+  .column--right {
+    grid-row: 3 / 4;
+    width: 100%;
+  }
+
+  .card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .project__content--active {
+    max-height: 30rem;
+  }
 }
