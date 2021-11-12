@@ -1,5 +1,5 @@
 # Personal CV
-Hey, here's is my personal CV as a front-end developer.
+Hey, here is my personal CV as a front-end developer.
 
 ### Built with
 - JavaScript
