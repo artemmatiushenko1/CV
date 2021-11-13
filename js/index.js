@@ -1,24 +1,27 @@
 'use strict';
 
-//Fullname fade-in animation
-const fullName = document.querySelector('.intro__full-name');
-const fullNameSplit = fullName.textContent.split('');
-fullName.textContent = '';
-fullNameSplit.forEach((letter) => {
-  fullName.innerHTML += '<span class="letter">' + letter + '</span>';
-});
-
-const animationTimer = setInterval(fadeIn, 60);
-let currentLetter = 0;
-
-function fadeIn() {
-  const letterSpans = document.querySelectorAll('.letter');
-  letterSpans[currentLetter].classList.add('fade-in');
-  currentLetter++;
-  if (currentLetter === letterSpans.length) {
-    clearInterval(animationTimer);
-  }
+//Text fade-in animation
+function animateText(textElements) {
+  textElements.forEach((element) => {
+    const textSplit = element.textContent.split('');
+    element.textContent = '';
+    textSplit.forEach((letter) => {
+      element.innerHTML += '<span class="letter">' + letter + '</span>';
+    });
+    let currentLetter = 0;
+    const letterSpans = element.querySelectorAll('.letter');
+    const animationTimer = setInterval(() => {
+      letterSpans[currentLetter].classList.add('fade-in');
+      currentLetter++;
+      if (currentLetter === letterSpans.length) {
+        clearInterval(animationTimer);
+      }
+    }, 60);
+  });
 }
+
+const textElements = document.querySelectorAll('.animated-text');
+animateText(textElements);
 
 //Progressbars animation
 const progressbars = document.querySelectorAll('.progress-bar__progress');
@@ -27,13 +30,12 @@ function animateProgress(bar) {
   const maxProgress = parseInt(bar.dataset['progress']);
   let currProgress = parseInt(bar.style.width.replace('px', ''));
   const progressAnimationTimer = setInterval(() => {
-    bar.style.width = currProgress + '%';
-    currProgress++;
-
     if (currProgress === maxProgress) {
       clearInterval(progressAnimationTimer);
     }
-  }, 12);
+    bar.style.width = currProgress + '%';
+    currProgress += 0.5;
+  }, 5);
 }
 
 progressbars.forEach((bar) => {
