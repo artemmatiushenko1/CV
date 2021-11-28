@@ -60,19 +60,19 @@ body {
   grid-column: 3 / -1;
 }
 
-.resume__photo {
+.intro__photo {
   max-width: 20rem;
   border-radius: 50%;
   display: inline-block;
 }
 
-.card {
+.section {
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.2s ease;
 }
 
-.card__title {
+.section__title {
   color: var(--color-primary);
   font-size: 1.7rem;
   position: relative;
@@ -81,8 +81,11 @@ body {
 }
 
 .intro {
-  grid-column: 2 / -1;
-  padding: 2rem 4rem;
+  grid-column: 1 / -1;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 3rem;
 }
 
 .intro__full-name {
@@ -160,10 +163,13 @@ body {
 .progress-bar {
   width: 100%;
   height: 1rem;
-  background-color: #ecf0f1;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.2s ease;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background-color: #ecf0f1;
 }
 
 .progress-bar__label {
@@ -171,47 +177,43 @@ body {
   margin-bottom: 5px;
 }
 
-.progress-bar__progress {
-  height: 100%;
-}
-
-.progress-bar__progress--html {
+.progress-bar--html::-webkit-progress-value {
   background-color: var(--color-html);
 }
 
-.progress-bar__progress--css {
+.progress-bar--css::-webkit-progress-value {
   background-color: var(--color-css);
 }
 
-.progress-bar__progress--sass {
+.progress-bar--sass::-webkit-progress-value {
   background-color: var(--color-sass);
 }
 
-.progress-bar__progress--bem {
+.progress-bar--bem::-webkit-progress-value {
   background-color: var(--color-bem);
 }
 
-.progress-bar__progress--js {
+.progress-bar--js::-webkit-progress-value {
   background-color: var(--color-js);
 }
 
-.progress-bar__progress--react {
+.progress-bar--react::-webkit-progress-value {
   background-color: var(--color-react);
 }
 
-.progress-bar__progress--git {
+.progress-bar--git::-webkit-progress-value {
   background-color: var(--color-git);
 }
 
-.progress-bar__progress--github {
+.progress-bar--github::-webkit-progress-value {
   background-color: var(--color-github);
 }
 
-.progress-bar__progress--design {
+.progress-bar--design::-webkit-progress-value {
   background-color: var(--color-design);
 }
 
-.progress-bar__progress--design-soft {
+.progress-bar--design-soft::-webkit-progress-value {
   background-color: var(--color-primary);
 }
 
@@ -385,6 +387,12 @@ body {
 }
 
 @media only screen and (max-width: 43.75em) {
+  .intro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 2rem;
+  }
+
   .resume {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -411,11 +419,16 @@ body {
   }
 
   .column--right {
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
     width: 100%;
   }
 
-  .card {
+  /* .card {
+    padding-left: 0;
+    padding-right: 0;
+  } */
+
+  .section {
     padding-left: 0;
     padding-right: 0;
   }

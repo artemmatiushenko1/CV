@@ -24,22 +24,22 @@ const textElements = document.querySelectorAll('.animated-text');
 animateText(textElements);
 
 //Progressbars animation
-const progressbars = document.querySelectorAll('.progress-bar__progress');
+const progressbars = document.querySelectorAll('.progress-bar');
 
 function animateProgress(bar) {
   const maxProgress = parseInt(bar.dataset['progress']);
-  let currProgress = parseInt(bar.style.width.replace('px', ''));
+  let currProgress = parseInt(bar.getAttribute('value'));
   const progressAnimationTimer = setInterval(() => {
-    if (currProgress === maxProgress) {
+    if (currProgress >= maxProgress) {
       clearInterval(progressAnimationTimer);
     }
-    bar.style.width = currProgress + '%';
+    bar.value = currProgress;
     currProgress += 0.5;
   }, 5);
 }
 
 progressbars.forEach((bar) => {
-  bar.style.width = 0;
+  bar.value = 0;
   animateProgress(bar);
 });
 
