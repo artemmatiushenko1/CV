@@ -1,6 +1,6 @@
 'use strict';
 
-//Text fade-in animation
+//Text animation
 function animateText(textElements) {
   textElements.forEach((element) => {
     const textSplit = element.textContent.split('');
@@ -43,7 +43,7 @@ progressbars.forEach((bar) => {
   animateProgress(bar);
 });
 
-//Acoordion functionlity
+//Acoordion functionality
 const accordionBtns = document.querySelectorAll('.project__name');
 
 accordionBtns.forEach((btn) => {
