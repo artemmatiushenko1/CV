@@ -77,16 +77,19 @@
       </section>
       <div class="column">
         <section class="education section">
-          <h3 class="section__title animated-text">Education</h3>
+          <h3 class="section__title animated-text">Education & Experience</h3>
           <ul class="education__list">
             <li class="education__item">
-              <div class="education__period">
-                <div class="education__time education__time--from">2020</div>
-                <div class="education__time education__time--to">now</div>
-              </div>
+              <div class="education__period">2020 - now</div>
               <p class="education__institution">
                 National Technical University of Ukraine “Igor Sikorsky Kyiv
-                Polytechnic Institute”, FICS
+                Polytechnic Institute”, Software engineering, FICS
+              </p>
+            </li>
+            <li class="education__item">
+              <div class="education__period">Nov 2021 - Mar 2022</div>
+              <p class="education__institution">
+                Intellias Apprenticeship - IntelliStart Front-end (React.js)
               </p>
             </li>
           </ul>
@@ -96,10 +99,47 @@
           <ul class="projects__list">
             <li class="projects__project">
               <h4 class="project__name project__name--active">
-                ZapysnichOK
+                Wallet
                 <i class="fas fa-chevron-down fa-chevron-down--active"></i>
               </h4>
               <div class="project__content project__content--active">
+                <p class="project__description">
+                  Web application for tracking expenses and income. Create your
+                  personal account. See detailed statistics by transaction
+                  categories, add income/expense transactions. See money
+                  exchange rate.
+                </p>
+                <ul class="project__techs-list">
+                  <li class="project__tech">React.js</li>
+                  <li class="project__tech">JavaScript</li>
+                  <li class="project__tech">Material UI</li>
+                  <li class="project__tech">Formik & Yup</li>
+                  <li class="project__tech">Redux</li>
+                  <li class="project__tech">React Router</li>
+                  <li class="project__tech">Redux toolkit</li>
+                </ul>
+                <div class="project__links">
+                  <a
+                    href="https://budget-wallet.netlify.app"
+                    target="blank"
+                    class="project__link"
+                    >Live site</a
+                  >
+                  <a
+                    href="https://github.com/VoznenkoMargo/budget_wallet"
+                    target="blank"
+                    class="project__link"
+                    >Source code</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="projects__project">
+              <h4 class="project__name">
+                ZapysnichOK
+                <i class="fas fa-chevron-down"></i>
+              </h4>
+              <div class="project__content">
                 <p class="project__description">
                   It is a web application for keeping notes. Built with vanilla
                   JavaScript, HTML & CSS. Using some kind of MVC architecture
@@ -317,7 +357,29 @@
                 max="100"
                 class="progress-bar progress-bar--react"
                 id="progress-react"
-                data-progress="25"
+                data-progress="60"
+              ></progress>
+            </li>
+            <li class="skills__item">
+              <label class="progress-bar__label" for="progress-redux"
+                >Redux</label
+              >
+              <progress
+                max="100"
+                class="progress-bar progress-bar--redux"
+                id="progress-redux"
+                data-progress="60"
+              ></progress>
+            </li>
+            <li class="skills__item">
+              <label class="progress-bar__label" for="progress-mui"
+                >Material UI</label
+              >
+              <progress
+                max="100"
+                class="progress-bar progress-bar--mui"
+                id="progress-mui"
+                data-progress="80"
               ></progress>
             </li>
             <li class="skills__item">
