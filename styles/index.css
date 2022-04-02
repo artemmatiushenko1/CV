@@ -5,6 +5,7 @@
   --color-sass: #fd79a8;
   --color-bem: #636e72;
   --color-js: #f1c40f;
+  --color-firebase: #ffd200;
   --color-react: #48dbfb;
   --color-git: #e74c3c;
   --color-github: #2c3e50;
@@ -97,7 +98,13 @@ body {
   margin-bottom: 2rem;
 }
 
-.intro__socials {
+.socials-handles__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials-list {
   display: flex;
   list-style: none;
   column-gap: 1.5rem;
@@ -138,6 +145,23 @@ body {
 
 .social__item:hover .fa-telegram {
   color: var(--color-primary);
+}
+
+.social__item:hover .fa-linkedin {
+  color: var(--color-mui);
+}
+
+.social-handles__email {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-handles__email i {
+  color: var(--color-bem);
+  display: inline-block;
+  font-size: 1.5rem;
 }
 
 .skills__list {
@@ -217,6 +241,10 @@ body {
 
 .progress-bar--design-soft::-webkit-progress-value {
   background-color: var(--color-primary);
+}
+
+.progress-bar--firebase::-webkit-progress-value {
+  background-color: var(--color-firebase);
 }
 
 .letter {
@@ -393,7 +421,7 @@ body {
     text-align: center;
   }
 
-  .intro__socials {
+  .socials-list {
     justify-content: center;
   }
 
